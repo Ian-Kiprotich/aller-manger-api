@@ -1,14 +1,15 @@
-import os
-from pymongo import MongoClient
+import os #it gets the env varibales and other stuff
+from pymongo import MongoClient #mongodb client import
 #load environmental variables
 from dotenv import load_dotenv
 from colorama import Fore, Back
-load_dotenv()
+load_dotenv() #fetches the env variables
 
 #create variables for values from .env
 MONGO_URI = os.getenv("MONGO_URI")
 #create a mongodb client instance
 client = MongoClient(MONGO_URI)
+
 print(Fore.YELLOW+"Trying to connect to MongoDB...")
 def check_mongodb_connection():
     try:

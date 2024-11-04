@@ -27,4 +27,6 @@ class UserBody(BaseModel):
     phone: str
     first_name: str
     last_name: str
-    
+
+"""class Apple(BaseModel):
+    name_apple: str"""
