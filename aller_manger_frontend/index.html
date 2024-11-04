@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aller Manger Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <!--Title and logo-->
+            <li class="nav-bar-title">Aller Manger</li>
+            <li id="reservationNavBtn">Make Reservation</li>
+            <li id="getReservationNavBtn">Get Reservation</li>
+            <li id="cancelReservationBtn">Cancel Reservation</li>
+            <li id="login-button">
+                <i class="fa fa-lock-open"></i>
+            </li>
+            <li id="logout-button">
+                <i class="fa fa-user-xmark"></i>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div id="message-correct"></div>
+        <div id="message-wrong"></div>
+        <!--Login Section-->
+        <div   class="sub-container">
+            
+            <form   id="login-form" method="POST">
+                <h2>Aller Manger</h2>
+                <div class="form-section">
+                    <label for="username">Email or Username</label>
+                    <br>
+                    <input type="text" name="username" id="username" placeholder="e.g. lincolnowiti">
+                </div>
+                
+                <div class="form-section">
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" name="password" id="password" >
+                </div>
+
+                <p id="sign-up-btn">
+                    Sign up instead?
+                </p>
+                <div class="form-section">
+                   
+
+                    <button type="submit">
+                        Sign In
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!--Register Section-->
+        <div class="sub-container">
+            
+            <form  id="signup-form" method="POST">
+                <h2>Aller Manger Sign Up</h2>
+                <div class="form-section">
+                    <label for="user_name">Username</label>
+                    <br>
+                    <input type="text" name="user_name" id="user_name" placeholder="e.g. lincolnowiti">
+                </div>
+
+                <div class="form-section">
+                    <label for="first_name">First Name</label>
+                    <br>
+                    <input type="text" name="first_name" id="first_name" placeholder="e.g. Theophilus">
+                </div>
+
+                <div class="form-section">
+                    <label for="last_name">Last Name</label>
+                    <br>
+                    <input type="text" name="last_name" id="last_name" placeholder="e.g. Owiti">
+                </div>
+
+                <div class="form-section">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="e.g. theo@mail.com">
+                </div>
+
+                <div class="form-section">
+                    <label for="phone">Phone Number</label>
+                    <br>
+                    <input type="text" name="phone" id="phone" placeholder="e.g. 254798990548">
+                </div>
+                
+                <div class="form-section">
+                    <label for="password-signup">Password</label>
+                    <br>
+                    <input type="password" name="password-signup" id="password-signup" >
+                </div>
+
+                <p id="login-back-btn">
+                    Back to login
+                </p>
+                <div class="form-section">
+                   
+
+                    <button type="submit">
+                        Sign In
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!--Make Reservation-->
+        <div class="sub-container reservations-flex-style">
+            
+            <form  id="make-reservation-form" action="http://127.0.0.1:8000/api/aller-manger/v1.0/users/create/account" method="POST">
+                <h2>Make a Reservation</h2>
+                <div class="reservations-side-container">
+
+                </div>
+                <div class="form-section guests">
+                    <label for="guest_names">Names</label>
+                    <br>
+                    <input type="text" name="guest_names" id="guest_names" placeholder="e.g. Theophilus, Rosemary">
+                    
+                </div>
+
+                <div class="form-section">
+                    <label for="guest_ids">National ID Nos.</label>
+                    <br>
+                    <input type="text" name="guest_ids" id="guest_ids" placeholder="e.g. 35584590, 41234560">
+                </div>
+
+                <div class="form-section">
+                    <label for="address">Address</label>
+                    <br>
+                    <input type="text" name="address" id="address" placeholder="e.g. Ngong Road, Adams Arcade, Nairobi">
+                </div>
+
+                <div class="form-section">
+                    <label for="phone-reservations">Phone to Contact/ Payment</label>
+                    <br>
+                    <input type="text" name="phone-reservations" id="phone-reservations" placeholder="e.g. 254758885970">
+                </div>
+
+            <div class="section-box-flex">
+                <div class="form-section">
+                    <label for="tableNumber">Table Number</label>
+                    <br>
+                    <select name="tableNumber" id="tableNumber">
+                        <option value="1">Table 01</option>
+                        <option value="10">Table 10</option>
+                        <option value="15">Table 15</option>
+                        <option value="50">Table 50</option>
+                        <option value="45">Table 45</option>
+                        <option value="22">Table 22</option>
+                        <option value="18">Table 18</option>
+                        <option value="11">Table 11</option>
+                        <option value="101">Table 101</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <label for="time">Time</label>
+                    <br>
+                    <select name="time" id="time">
+                        <option value="morning">Morning Hours</option>
+                        <option value="afternoon">Afternoon Hours</option>
+                        <option value="night">Night Hours</option>
+                        
+                    </select>
+                </div>
+            </div>
+               
+                <div class="form-section">
+                    <button type="submit">
+                        Reserve
+                    </button>
+                </div>
+            </form>
+        </div>
+
+         <!--Cancel Reservation Section-->
+         <div   class="sub-container">
+            
+            <form   id="cancel-form" method="POST">
+                
+                <div class="form-section">
+                    <label for="table_no">Table No</label>
+                    <br>
+                    <input type="text" name="table_no" id="table_no" placeholder="e.g. 13">
+                </div>
+                
+               
+                <div class="form-section">
+                    <button type="submit">
+                        Cancel Reservation
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!--Reserved Tables-->
+        <div class="sub-container">
+           
+            <div id="reservations-table">
+                <div class="show-case" class="rsvd-tables">
+                    <img src="assets/date.png" alt="">
+                </div>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Reservation Ticket</td>
+                            <td>Names</td>
+                            <td>National Ids</td>
+                            <td>Time</td>
+                            <td>Table No.</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-list">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin:0
+}
+
+/*
+    font-family: "Pacifico", serif;
+    font-family: "Montserrat", sans-serif;
+*/
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.nav-bar-title{
+    font-family: "Pacifico", serif;
+    font-size: 18px;   
+    font-weight: 900;
+    color: #e74242;
+}
+
+.nav-bar{
+    width: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-bar> ul{
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    
+}
+
+.nav-bar>ul >li{
+    cursor: pointer;
+    margin-left: 5px;
+    padding-bottom: 10px;   
+}
+
+.nav-bar>ul >li:hover{
+    font-weight: 900;
+    color: #e74242;
+    border-bottom: 1px solid #e74242;
+}
+
+#login-button, #logout-button{
+    padding: 15px;
+    width: 17px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #505050;
+    background-color: #ffe1e1;
+    border-radius: 50%;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container{
+    margin-top: 2%;
+    width: 50%;
+    padding: 10px;
+    /*border: 1px solid #ccc;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.sub-container*/
+
+.reservations-flex-style{
+    margin-top: -2%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+
+}
+
+.reservations-side-container{
+    height: 200px;
+    width: 100%;
+    background: url('assets/allermanger.png');
+    /*background-repeat: no-repeat;*/
+    background-position: 70% 75%;
+    background-size: cover;
+   border: none;
+   
+}
+
+.sub-container> form> h2{
+    text-align: center;
+    color: #e74242;
+    font-family: "Pacifico", serif;
+}
+
+.sub-container> form{
+    box-shadow: 0px 2px 4px 0px #949393;
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+}
+
+.sub-container> form> .form-section{
+    padding: 10px;
+}
+
+.section-box-flex > .form-section{
+    margin-left: 20px;
+    width: 30%;
+}
+
+.sub-container> form> .form-section> label, .section-box-flex .form-section label{
+    font-family: "Montserrat", sans-serif;
+    color: #444;
+    font-size: 16px;
+}
+
+.sub-container> form> .form-section> input, .form-section> select{
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    /*border-bottom: 0.4px solid #e74242;*/
+    background-color: #e1e1e1;
+    width: 90%;
+    outline: none;
+}
+
+.section-box-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-container> form> .form-section> button{
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    color: #fff;
+    background:  #e74242;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sub-container> form> .form-section> input[type="password"]{
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+}
+
+#sign-up-btn, #login-back-btn{
+    border: none;
+    color: #e74242;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    
+}
+
+.fa-lock-open, .fa-user-xmark{
+    color: #e74242;
+}
+
+.fa-lock{
+    color: #147843;
+}
+
+#signup-form, #cancel-form{
+    display: none;
+}
+
+#make-reservation-form{
+    display: none;
+}
+
+#message-correct{
+    display: none;
+    border: 1px solid #1fd68d;
+    background-color: #d9fff1;
+    color: #1fd68d;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+#message-wrong{
+    display: none;
+    border: 1px solid #e74242;
+    background-color: #ffeaea;
+    color: #e74242;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+#delete-trash-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete-trash-form> input{
+    width: 10px;
+    height: 2px;
+    border: none;
+    background-color: #f4f4f4;
+    color: #f4f4f4;
+}
+
+#delete-trash-form> button{
+    border: none;
+    background-color: #f4f4f4;
+    color: #e74242;
+    cursor: pointer;
+}
+
+#reservations-table{
+    margin-top: -15%;
+    display: none;
+}
+
+.sub-container> #reservations-table> .show-case{
+    height: 200px;
+    width: 100%;
+}
+
+.sub-container> #reservations-table> .show-case img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.sub-container> #reservations-table> table{
+   padding: 10px;
+   border: 1px solid #ccc;
+}
+
+.sub-container> #reservations-table> table> thead> tr>td{
+    padding: 5px;
+    color: #fff;
+    background: #e74242;
+    
+ }
+
+ .sub-container> #reservations-table> table> tbody> tr>td{
+    padding: 5px;
+    color: #444;
+    background-color: #f4f4f4;
+    
+ }
