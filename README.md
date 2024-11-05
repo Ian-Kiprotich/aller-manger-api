@@ -72,7 +72,7 @@ Before we get started you need to have :
 ## Using the REST API
  You might want to start using the base URL : http://127.0.0.1:8000/api/aller-manger/v1.0/" with postman.
 
- More information will be given after the session ends on Monday.........
+ Now use main.py as your guide and complete the challenges and exercises.
 
 ## Front End
 Simple just Open the index.html from aller_manger_frontend folder
