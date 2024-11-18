@@ -11,6 +11,7 @@ In this tutorial we shall be setting up fastapi and creating endpoints that woul
 
 <img src="aller_manger_frontend/assets/allerManger.gif" style="height:400px; width:100%; object-fit:contain;" alt="picture of aller manger app" />
 
+
 ### Setting Up
 Before we get started you need to have :
 * MongoDB Compass Community Edition Installed (or you can use your MongoDB account database connection string Atlas URL)
